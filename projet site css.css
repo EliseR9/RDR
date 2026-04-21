@@ -120,4 +120,12 @@ body {
 .characters {
   display: flex;
   gap: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+.characters2 {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  margin: 5px;
 }
