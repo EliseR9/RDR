@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./image/Rdr2 img.jpg">
+    <title>Red Dead Redemption</title>
+    <link rel="stylesheet" href="projet site css.css">
+</head>
+<body>
+    <h1>Red Dead Redemption</h1>
+
+<!--boutons-->
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('histoire')"><a href="./projet site info.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Histoire</a></button>
+        <button class="tab-button" onclick="openTab('types')"> <a href="page personnages.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Personnages</a></button>
+        <button class="tab-button" onclick="openTab('avantages')">Disponible</button>
+        
+    </div>
+    <script>
+        document.addEventListener('mousemove', e => {
+            const trail = document.createElement('div');
+            trail.classList.add('trail');
+            trail.style.left = e.pageX + 'px';
+            trail.style.top = e.pageY + 'px';
+            document.body.appendChild(trail);
+        
+            // Supprime la trace après l'animation pour ne pas saturer la page
+            setTimeout(() => {
+                trail.remove();
+            }, 500); // correspond à la durée de l'animation
+        });
+        
+        </script>
+        <script>
+            function openTab(tabId) {
+                // Cacher tous les contenus
+                const contents = document.querySelectorAll('.tab-content');
+                contents.forEach(content => content.classList.remove('active'));
+    
+                // Retirer la classe active des boutons
+                const buttons = document.querySelectorAll('.tab-button');
+                buttons.forEach(button => button.classList.remove('active'));
+    
+                // Afficher le bon onglet
+                document.getElementById(tabId).classList.add('active');
+                event.target.classList.add('active');
+            }
+        </script>
+            <P id="p1">Red Dead Redemption</p>
+            <p id="p2"> suit les aventures de John Marston, quelque anées après avoir quitté le gang</p> 
+<P id="p1"> Contexte et Intrigue</P>
+<p id= p2>Le jeu suit John Marston, 
+un ancien hors-la-loi contraint de traquer ses anciens compagnons afin de protéger sa famille.<br>
+L’histoire se déroule dans un Far West en pleine évolution,<br> 
+où la modernité et la loi commencent à supplanter le mode de vie des cowboys.<br>
+Au fil de son parcours, John traverse des territoires hostiles,<br> 
+fait face à son passé et rencontre de nombreux personnages marquants. Le récit aborde des thèmes comme la rédemption,<br>
+la loyauté et la disparition progressive d’un monde sauvage.<br></p>
+
+
+
+            <P id="p1">Red Dead Redemption 2</p>
+            <p id="p2"> suit les aventures d'Arthur Morgan, un hors-la-loi du gang Van der Linde, dans un monde en déclin à la fin de l'ère du Far West en 1899.</p> 
+<P id="p1"> Contexte et Intrigue</P>
+<p id= p2>Ce jeu, se déroulant avant les événements du premier opus, met en scène Arthur Morgan, 
+membre influent du gang de Dutch.<br>
+L’histoire s’intéresse à la vie quotidienne d’un groupe de hors-la-loi en fuite,<br> 
+tentant de survivre dans un monde en mutation.<br>
+Entre braquages, déplacements constants et tensions internes,<br> 
+Arthur est confronté à des choix moraux et à ses propres valeurs.<br> 
+Le jeu met en avant les relations humaines, la survie et la complexité des décisions dans un univers riche et immersif.<br></p>
+</body>
+</html>

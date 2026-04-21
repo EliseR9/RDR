@@ -1,0 +1,123 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #000000;
+}
+
+h1 {
+    text-align: center;
+    background-color: #cf0303;
+    padding: 20px;
+    margin: 0px;
+}
+
+/* Barre des onglets */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(151, 54, 54);
+}
+
+.tabs button {
+    background-color: rgb(151, 54, 54);
+    color: rgb(12, 1, 1);
+    border: none;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tabs button:hover {
+    background-color: #555;
+}
+
+/* Contenu des onglets */
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+}
+
+.tab-content.active {
+    display: block;
+}
+body {
+    margin: 0px;
+    height: 100vh;
+    background: rgb(0, 0, 0); /* fond sombre pour mieux voir la lumière */
+    overflow: hidden;
+    cursor: none; /* cache le curseur normal */
+}
+
+.trail {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgb(240, 238, 238) 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: fade 0.5s forwards;
+}
+
+@keyframes fade {
+    to { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+}
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    padding: 0px;
+}
+
+/* Carte principale */
+.card {
+    width: 200px;
+    background-color: #f2f2f2;
+    border-radius: 6px;
+    overflow: hidden; /* coupe ce qui dépasse */
+    gap: 20px;
+}
+
+/* Image en haut */
+.card img {
+    width: 100%;
+    display: block;
+}
+
+/* Contenu texte */
+.card-content {
+    padding: 15px;
+}
+.prenom {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.nom {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #000;
+}
+#p1{
+    color: #CCCCCC;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+
+}
+#p2{
+    color: #CCCCCC;
+    font-size: 17px;
+    text-align: center;
+
+}
+.characters {
+  display: flex;
+  gap: 20px;
+}

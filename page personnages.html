@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./image/Rdr2 img.jpg">
+    <title>Red Dead Redemption</title>
+    <link rel="stylesheet" href="projet site css.css">
+</head>
+<body>
+    <h1>Red Dead Redemption</h1>
+
+<!--boutons-->
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('Histoire')"> <a href="./projet site info.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Histoire</a></button>
+        <button class="tab-button" onclick="openTab('Personnage')"> <a href="page personnages.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Personnages</a></button>
+        <button class="tab-button" onclick="openTab('avantages')">Disponible</button>
+    </div>
+    <script>
+        document.addEventListener('mousemove', e => {
+            const trail = document.createElement('div');
+            trail.classList.add('trail');
+            trail.style.left = e.pageX + 'px';
+            trail.style.top = e.pageY + 'px';
+            document.body.appendChild(trail);
+        
+            // Supprime la trace après l'animation pour ne pas saturer la page
+            setTimeout(() => {
+                trail.remove();
+            }, 500); // correspond à la durée de l'animation
+        });
+        
+        </script>
+        <script>
+            function openTab(tabId) {
+                // Cacher tous les contenus
+                const contents = document.querySelectorAll('.tab-content');
+                contents.forEach(content => content.classList.remove('active'));
+    
+                // Retirer la classe active des boutons
+                const buttons = document.querySelectorAll('.tab-button');
+                buttons.forEach(button => button.classList.remove('active'));
+    
+                // Afficher le bon onglet
+                document.getElementById(tabId).classList.add('active');
+                event.target.classList.add('active');
+            }
+        </script>
+        <div class="characters">
+         <div class="card">
+            <img src="./image/dutch rdr.jpg" alt="Image du jeu">
+    
+            <div class="card-content">
+                <div class="prenom">Dutch</div>
+                <div class="nom">Van Der Linde</div>
+                <div class="description">
+                  Chef du gang des hors-la-loi
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./image/micah rdr.jpg" alt="Image du jeu">
+    
+            <div class="card-content">
+                <div class="prenom">Micah</div>
+                <div class="nom">Bell</div>
+                <div class="description">
+                 Bras droit de Dutch
+                </div>
+            </div>
+        </div>
+          <div class="card">
+            <img src="./image/bill rdr.jpg" alt="Image du jeu">
+    
+            <div class="card-content">
+                <div class="prenom">Bill</div>
+                <div class="nom">Williamson</div>
+                <div class="description">
+                  Le costaud du gang 
+                </div>
+            </div>
+        </div>  <div class="card">
+            <img src="./image/javier rdr.jpg" alt="Image du jeu">
+    
+            <div class="card-content">
+                <div class="prenom">Javier</div>
+                <div class="nom">Escuella</div>
+                <div class="description">
+                  Coéquipier très fidèle
+                </div>
+            </div>
+        </div>  <div class="card">
+            <img src="./image/sean rdr.jpg" alt="Image du jeu">
+    
+            <div class="card-content">
+                <div class="prenom">Sean</div>
+                <div class="nom">MacGuire</div>
+                <div class="description">
+                  Jeune plein d'énergie du gang 
+                </div>
+            </div>
+        </div>
+             <div class="card">
+            <img src="./image/strauss rdr.jpg" alt="Image du jeu">
+    
+            <div class="card-content">
+                <div class="prenom">Leopold</div>
+                <div class="nom">Strauss</div>
+                <div class="description">
+                  Comtapble du gang 
+                </div>
+            </div>
+        </div>
+                  <div class="card">
+            <img src="./image/hosea.jpg" alt="Image du jeu">
+    
+            <div class="card-content">
+                <div class="prenom">Hosea</div>
+                <div class="nom">Matthews</div>
+                <div class="description">
+                  Le cerveau et cofondateur du gang
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
