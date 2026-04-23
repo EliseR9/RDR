@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./image/Rdr2 img.jpg">
+    <title>Red Dead Redemption !!</title>
+    <link rel="stylesheet" href="projet site css.css">
+</head>
+<body>
+    <h1>Red Dead Redemption</h1>
+
+<!--boutons-->
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('histoire')"><a href="./projet site info.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Histoire</a></button>
+        <button class="tab-button" onclick="openTab('personnage')"> <a href="page personnages.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Personnages</a></button>
+        <button class="tab-button" onclick="openTab('carte')"><a href="page carte rdr.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Carte interactive</a></button>
+        
+    </div>
+    <div class="map-wrapper">
+
+        <div id="map-container">
+            ...
+        </div>
+
+        <div id="info-container">
+            ...
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener('mousemove', e => {
+            const trail = document.createElement('div');
+            trail.classList.add('trail');
+            trail.style.left = e.pageX + 'px';
+            trail.style.top = e.pageY + 'px';
+            document.body.appendChild(trail);
+        
+            // Supprime la trace après l'animation pour ne pas saturer la page
+            setTimeout(() => {
+                trail.remove();
+            }, 500); // correspond à la durée de l'animation
+        });
+        
+        </script>
+        <script>
+            function openTab(tabId) {
+                // Cacher tous les contenus
+                const contents = document.querySelectorAll('.tab-content');
+                contents.forEach(content => content.classList.remove('active'));
+    
+                // Retirer la classe active des boutons
+                const buttons = document.querySelectorAll('.tab-button');
+                buttons.forEach(button => button.classList.remove('active'));
+    
+                // Afficher le bon onglet
+                document.getElementById(tabId).classList.add('active');
+                event.target.classList.add('active');
+            }
+        </script>
+           <div id="map-container">
+  <img id="map" src="image/rdr2 carte.jpg" alt="Carte de rdr2">
+
+  <!-- Marqueurs -->
+  <div class="marker" style="top: 40%; left: 48%;" data-name="Château d'Hyrule" data-desc="Le centre du royaume et ancienne maison de la famille royale"></div>
+  <div class="marker" style="top: 30%; left: 22%;" data-name="Village Piaf" data-desc="Le village des Piafs, perché dans les montagnes d'Hebra"></div>
+  <div class="marker" style="top: 21%; left: 72%;" data-name="Montagne de la Mort" data-desc="Une montagne volcanique, foyer des Gorons"></div>
+  <div class="marker" style="top: 85%; left: 20%;" data-name="Désert Gerudo" data-desc="Un très grand désert abritant la cité Gerudo"></div>
+  <div class="marker" style="top: 47.5%; left: 79%;" data-name="Domaine Zora" data-desc="Un magnifique royaume aquatique habité par les Zoras"></div>
+  <div class="marker" style="top: 25%; left: 53%;" data-name="Forêt Korogu" data-desc="Une forêt mystérieuse où réside l'Arbre Mojo et les Korogus"></div>
+  <div class="marker" style="top: 85%; left: 63%;" data-name="Forêt de Firone" data-desc="Une forêt où les secrets cachés se trouvent à chaque recoin" ></div>
+  <div class="marker" style="top: 70%; left: 42%;" data-name="Plateau du Prélude" data-desc="Le plateau où Link se réveille après 100 ans de sommeil"></div>
+  <div class="marker" style="top: 72%; left: 65%;" data-name="Monts Géminés" data-desc="Deux montagnes jumelles pas loin du premier village : Cocorico"></div>
+  <div class="marker" style="top: 15%; left: 85%;" data-name="Akkala" data-desc="Une région sauvage abritant le laboratoire antique d'Akkala"></div>
+  <div class="marker" style="top: 90%; left: 88%;" data-name="île mystérieuse" data-desc="Une île où une grande épreuve attend Link"></div>
+  <div class="marker" style="top: 70%; left: 20%;" data-name="Gang des Yigas" data-desc="Une grotte ou habite le Gang des Yigas"></div>
+  <div class="marker" style="top: 60%; left: 63%;" data-name="Village de Cocorico" data-desc="Le tout premier village de l'aventure, il apparait dans presque tout les jeux"></div>
+  <div class="marker" style="top: 73%; left: 82%;" data-name="Village d'Elimith" data-desc="Le village où il y a le tout premier laboratoire antique"></div>
+  <div class="marker" style="top: 12%; left: 78%;" data-name="Etang du crane" data-desc="Un étang en forme de crane ou un mystérieux vendeur d'objets de monstres habite"></div>
+</div>
+
+<!--afficher l'info sous la carte -->
+<div id="info-container">
+  <h2 id="info-title">Clique sur un lieu</h2>
+  <p id="info-desc">Les détails apparaîtront ici.</p>
+</div>
+
+<!-- CSS -->
+<style>
+  body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+  }
+
+  #map-container {
+      position: relative;
+      width: 800px;
+      height: 600px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+  }
+
+  #map {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+
+  .marker {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: red;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      border: 2px solid white;
+  }
+
+  #info-container {
+      margin-top: 20px;
+      padding: 10px;
+      width: 800px;
+      text-align: center;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  #info-title {
+      margin: 0;
+      font-size: 20px;
+  }
+
+  #info-desc {
+      font-size: 16px;
+      color: #555;
+  }
+</style>
+<!-- JavaScript -->
+<script>
+  const markers = document.querySelectorAll(".marker");
+  const infoTitle = document.getElementById("info-title");
+  const infoDesc = document.getElementById("info-desc");
+
+  markers.forEach(marker => {
+      marker.addEventListener("click", () => {
+          infoTitle.innerText = marker.dataset.name;
+          infoDesc.innerText = marker.dataset.desc;
+      });
+  });
+</script>
+</body>
+</html>
