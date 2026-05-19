@@ -129,6 +129,12 @@ body {
   padding: 5px;
   margin: 5px;
 }
+.characters3 {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  margin: 5px;
+}
 .map-wrapper {
     display: flex;
     flex-direction: column;
