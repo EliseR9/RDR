@@ -1,9 +1,25 @@
-
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0px;
     padding: 0px;
     background-color: #000000;
+     font-family: 'Cinzel', serif;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+    url("./image/Rdr2 img.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:white;
+    min-height:100vh;
 }
 
 h1 {
@@ -43,6 +59,7 @@ h1 {
             font-size:1rem;
             font-weight:bold;
         }
+        
 
 .tab-content.active {
     display: block;
