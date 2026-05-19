@@ -1,75 +1,242 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Red Dead Redemption</title>
+
     <link rel="icon" type="image/png" href="./image/Rdr2 img.jpg">
-    <title>Red Dead Redemption !!</title>
-    <link rel="stylesheet" href="projet site css.css">
+
+    <!-- Police western -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: 'Cinzel', serif;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+            url('./image/Rdr2 img.jpg') center/cover no-repeat fixed;
+            color:white;
+            min-height:100vh;
+            overflow-x:hidden;
+        }
+
+        /* TITRE */
+        h1{
+            text-align:center;
+            font-size:4rem;
+            margin-top:40px;
+            color:#e63946;
+            text-shadow: 3px 3px 10px black;
+            letter-spacing:3px;
+        }
+
+        /* MENU */
+        .tabs{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            margin:40px 0;
+            flex-wrap:wrap;
+        }
+
+        .tab-button{
+            background:#8b0000;
+            border:none;
+            padding:15px 25px;
+            border-radius:10px;
+            transition:0.3s;
+            cursor:pointer;
+            box-shadow:0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .tab-button:hover{
+            transform:scale(1.08);
+            background:#c1121f;
+        }
+
+        .tab-button a{
+            text-decoration:none;
+            color:white;
+            font-size:1rem;
+            font-weight:bold;
+        }
+
+        /* CONTENU */
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:auto;
+            padding-bottom:50px;
+        }
+
+        .card{
+            background:rgba(0,0,0,0.65);
+            border-left:5px solid #e63946;
+            margin:30px 0;
+            padding:25px;
+            border-radius:15px;
+            backdrop-filter: blur(4px);
+            box-shadow:0 0 15px rgba(0,0,0,0.6);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        .card h2{
+            color:#f4a261;
+            margin-bottom:15px;
+            font-size:2rem;
+        }
+
+        .card p{
+            line-height:1.8;
+            font-size:1.1rem;
+            color:#f1f1f1;
+        }
+
+        /* TRAIL SOURIS */
+        .trail{
+            position:absolute;
+            width:12px;
+            height:12px;
+            background:#e63946;
+            border-radius:50%;
+            pointer-events:none;
+            animation:fadeOut 0.5s linear forwards;
+            box-shadow:0 0 10px red;
+        }
+
+        @keyframes fadeOut{
+            from{
+                opacity:1;
+                transform:scale(1);
+            }
+            to{
+                opacity:0;
+                transform:scale(3);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+
+            h1{
+                font-size:2.5rem;
+            }
+
+            .card h2{
+                font-size:1.5rem;
+            }
+
+            .card p{
+                font-size:1rem;
+            }
+
+            .tab-button{
+                width:80%;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
+
     <h1>Red Dead Redemption</h1>
 
-<!--boutons-->
+    <!-- MENU -->
     <div class="tabs">
-        <button class="tab-button active" onclick="openTab('histoire')"><a href="./projet site info.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Histoire</a></button>
-        <button class="tab-button" onclick="openTab('personnage')"> <a href="page personnages.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Personnages</a></button>
-        <button class="tab-button" onclick="openTab('carte')"><a href="page carte rdr.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Carte interactive</a></button>
-        
+
+        <button class="tab-button">
+            <a href="./projet site info.html">Histoire</a>
+        </button>
+
+        <button class="tab-button">
+            <a href="page personnages.html">Personnages</a>
+        </button>
+
+        <button class="tab-button">
+            <a href="page carte rdr.html">Carte Interactive</a>
+        </button>
+
     </div>
+
+    <!-- CONTENU -->
+    <div class="container">
+
+        <div class="card">
+
+            <h2>Red Dead Redemption</h2>
+
+            <p>
+                On suit les aventures de John Marston, plusieurs années après avoir quitté son ancien gang.
+            </p>
+
+            <br>
+
+            <p>
+                Le jeu raconte l’histoire d’un ancien hors-la-loi forcé de traquer ses anciens compagnons afin de protéger sa famille.
+                Dans un Far West en pleine évolution, la modernité commence à remplacer les cowboys et les hors-la-loi.
+                John traverse des territoires hostiles, affronte son passé et rencontre de nombreux personnages marquants.
+                L’histoire aborde des thèmes forts comme la rédemption, la loyauté et la disparition progressive du monde sauvage.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Red Dead Redemption 2</h2>
+
+            <p>
+                Le joueur suit Arthur Morgan, membre du gang Van der Linde, dans un Far West en déclin en 1899.
+            </p>
+
+            <br>
+
+            <p>
+                Ce second opus, qui se déroule avant les événements du premier jeu, plonge le joueur dans la vie quotidienne d’un groupe de hors-la-loi en fuite.
+                Entre braquages, survie et tensions internes, Arthur Morgan est confronté à des choix moraux difficiles.
+                Le jeu met fortement en avant les relations humaines, l’honneur et la survie dans un univers immersif et vivant.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- EFFET SOURIS -->
     <script>
+
         document.addEventListener('mousemove', e => {
+
             const trail = document.createElement('div');
+
             trail.classList.add('trail');
+
             trail.style.left = e.pageX + 'px';
             trail.style.top = e.pageY + 'px';
+
             document.body.appendChild(trail);
-        
-            // Supprime la trace après l'animation pour ne pas saturer la page
+
             setTimeout(() => {
                 trail.remove();
-            }, 500); // correspond à la durée de l'animation
+            }, 500);
+
         });
-        
-        </script>
-        <script>
-            function openTab(tabId) {
-                // Cacher tous les contenus
-                const contents = document.querySelectorAll('.tab-content');
-                contents.forEach(content => content.classList.remove('active'));
-    
-                // Retirer la classe active des boutons
-                const buttons = document.querySelectorAll('.tab-button');
-                buttons.forEach(button => button.classList.remove('active'));
-    
-                // Afficher le bon onglet
-                document.getElementById(tabId).classList.add('active');
-                event.target.classList.add('active');
-            }
-        </script>
-            <P id="p1">Red Dead Redemption</p>
-            <p id="p2"> On suit les aventures de John Marston, quelque années après avoir quitté le gang</p> 
-<P id="p1"> Contexte et Intrigue</P>
-<p id= p2>Le jeu suit John Marston, 
-un ancien hors-la-loi contraint de traquer ses anciens compagnons afin de protéger sa famille.<br>
-L’histoire se déroule dans un Far West en pleine évolution,<br> 
-où la modernité et la loi commencent à supplanter le mode de vie des cowboys.<br>
-Au fil de son parcours, John traverse des territoires hostiles,<br> 
-fait face à son passé et rencontre de nombreux personnages marquants. Le récit aborde des thèmes comme la rédemption,<br>
-la loyauté et la disparition progressive d’un monde sauvage.<br></p>
 
+    </script>
 
-
-            <P id="p1">Red Dead Redemption 2</p>
-            <p id="p2"> Onsuit les aventures d'Arthur Morgan, un hors-la-loi du gang Van der Linde, dans un monde en déclin à la fin de l'ère du Far West en 1899.</p> 
-<P id="p1"> Contexte et Intrigue</P>
-<p id= p2>Ce jeu, se déroulant avant les événements du premier opus, met en scène Arthur Morgan, 
-membre influent du gang de Dutch.<br>
-L’histoire s’intéresse à la vie quotidienne d’un groupe de hors-la-loi en fuite,<br> 
-tentant de survivre dans un monde en mutation.<br>
-Entre braquages, déplacements constants et tensions internes,<br> 
-Arthur est confronté à des choix moraux et à ses propres valeurs.<br> 
-Le jeu met en avant les relations humaines, la survie et la complexité des décisions dans un univers riche et immersif.<br></p>
 </body>
+
 </html>
